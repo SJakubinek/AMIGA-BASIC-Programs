@@ -1,0 +1,28 @@
+DIM x$,Y$,Z$,a%,b%,c%
+LET a%=1
+LET b%=10
+
+start:
+CLS
+PRINT "Denke dir eine Zahl zwischen 1 und 10."
+INPUT "Drücke Return wenn fertig";x$
+GOTO raten
+
+raten:
+c%=INT(RND(a%)*b%)+1
+PRINT "Meine Zahl ist: ";c%
+INPUT "Ist meine Zahl (g)leich, (h)öher oder (n)iedriger als deine";z$
+IF z$="h" AND c%>1 AND c%<=10 THEN GOTO toohigh
+IF z$="n" AND c%<10 AND c%>1=1 THEN GOTO toolow
+IF z$="g" THEN PRINT "Geschafft!"
+INPUT "Noch einmal (j/n)";y$
+IF y$="j" THEN GOTO start
+END
+
+toohigh:
+b%=c%-1
+GOTO raten
+
+toolow:
+a%=c%+1
+GOTO raten
