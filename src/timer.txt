@@ -1,0 +1,7 @@
+pStart = TIMER
+FOR i% = 1 TO 10000
+NEXT i%
+pEND = TIMER
+elapsed = pEnd - pStart
+PRINT "Seconds elapsed:",INT(elapsed)
+END

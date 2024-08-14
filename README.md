@@ -16,6 +16,17 @@ Well this prints "HALLO" 10 times onto the screen. Nothing else.
 ## zahlenraten
 Usually you had to guess the number the computer picked. I made it the opposite way. Yes, you can cheat. But why you should cheat?!
 
+## taschenrechner
+I got into school and sadly we weren't adding numbers or substracting or whatever. No, instead we had to paint circles around things that were of the same type and count them. Boring! At home I wrote this little program, which I later may or may not have used for my homework. ;)
+
+## timer
+This small timer uses frames to calculate the time a program, loop or whatever needed to be executed. It's not that accurate as it uses the frames for refreshing the TV. The timer I created is for Germany as it uses 50Hz instead of the 60Hz used in the USA. Also keep in mind that the frames are decreased. So sometimes you end up with a negative number, when it starts again after 65535.
+Created in 08/2024 for fun
+
+## primzahlen
+This is just the sieve of Eratosthenes. Nothing special. The variable N can't be higher than 2851 on a machine with 16kB RAM.
+Created in 08/2024 for fun
+
 # How to use
 Type them in on the real machine or your prefered emulator.
 

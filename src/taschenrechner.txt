@@ -1,0 +1,32 @@
+start:
+CLS
+INPUT "Möchtest du (a)ddieren, (s)ubtrahieren, (d)ividieren oder (m)ultiplizieren";a$
+INPUT "Schreibe die erste Zahl";b
+INPUT "Schreibe die zweite Zahl";c
+IF a$="a" THEN GOTO addition
+IF a$="s" THEN GOTO subtraktion
+IF a$="d" THEN GOTO division
+IF a$="m" THEN GOTO multiplikation
+END
+
+ergebnis:
+PRINT "Das Ergebnis ist: ";d
+INPUT "Noch einma (j/n)";e$
+IF e$="j" THEN GOTO start
+IF e$="n" THEN END
+
+addition:
+d=b+c
+GOTO ergebnis
+
+subtraktion:
+d=b-c
+GOTO ergebnis
+
+division:
+d=b/c
+GOTO ergebnis
+
+multiplikation:
+d=b*c
+GOTO ergebnis

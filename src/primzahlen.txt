@@ -1,0 +1,44 @@
+pStart = TIMER
+n% = 2851
+DIM a!(n%)
+noPrime = 0
+
+start:
+CLS
+GOTO fillArr
+GOTO findPrimeNumbers
+GOTO calcTime
+
+fillArr:
+FOR i% = 2 TO n%
+  a(n%) = 0
+NEXT i%
+
+findPrimeNumbers:
+FOR i% = 2 to SQL(n%)
+  IF a(i%) = 0 THEN
+    noPrime = noPrime + 1
+	PRINT i%
+	FOR b% = i% * i% TO n% STEP i%
+	  a(b%) = -1
+	NEXT i%
+  END IF
+NEXT i%
+FOR i% = SQR(n%)+1 TO n%
+  IF a(i%) = 0 THEN
+    noPrime = noPrime + 1
+	PRINT i%
+  END IF
+NEXT i%  
+PRINT
+PRINT "Found";noPrime;"prime numbers"
+
+calcTime:
+pEnd = TIMER
+elapsed = pEnd - pStart
+PRINT "Seconds at start:",INT(pStart)
+PRINT "Seconds at end:",INT(pEnd)
+PRINT "Seconds elapsed:",INT(elapsed)
+elapsed = elapsed / 60
+PRINT "Minutes elapsed:",INT(elapsed)
+END

@@ -1,6 +1,5 @@
-DIM x$,Y$,Z$,a%,b%,c%
-LET a%=1
-LET b%=10
+a%=1
+b%=10
 
 start:
 CLS
